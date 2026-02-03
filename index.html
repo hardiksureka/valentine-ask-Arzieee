@@ -1,51 +1,46 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Will you be my Valentine?</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <main class="stage">
-    <div class="card" id="card">
-      <div class="front" id="front">
-        <h1 class="small">A little question for</h1>
-        <h2 class="recipient" id="recipient">[Her Name]</h2>
-        <button class="heart-btn" id="openBtn" aria-label="Open card">
-          <svg viewBox="0 0 24 24" class="heart" aria-hidden="true">
-            <path d="M12 21s-7.5-4.35-10-7.08C-1.1 7.6 4 3.5 7.5 6.2 9.2 7.6 12 10 12 10s2.8-2.4 4.5-3.8C20 3.5 25.1 7.6 22 13.9 19.5 16.65 12 21 12 21z" />
-          </svg>
-        </button>
-        <p class="hint">Tap the heart</p>
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Valentine Letter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <div class="inside hidden" id="inside" aria-hidden="true">
-        <h3 class="dancing" id="headline">Will you be my Valentine?</h3>
-        <p class="message" id="message">I pick you today and every day. Would you be my Valentine?</p>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Envelope Screen -->
+    <div id="envelope-container">
+      <img src="envelope.png" alt="Envelope" id="envelope" />
+      <p>♡ Letter for You ♡</p>
+    </div>
 
-        <div class="buttons">
-          <button id="yesBtn" class="yes">Yes 💖</button>
-          <button id="noBtn" class="no">No 😢</button>
+    <!-- Letter Screen -->
+    <div id="letter-container">
+      <div class="letter-window">
+        <h1 id="letter-title">Will you be my Valentine?</h1>
+
+        <img src="cat_heart.gif" class="cat" id="letter-cat" />
+
+        <div class="buttons" id="letter-buttons">
+          <img src="yes.png" class="btn yes-btn" alt="Yes" />
+
+          <div class="no-wrapper">
+            <img src="no.png" class="btn no-btn" alt="No" />
+          </div>
         </div>
+
+        <p id="final-text" class="final-text" style="display: none">
+          <strong>Valentine Date:</strong> Meow Restaurant at 7pm. Dress fancy!
+        </p>
       </div>
     </div>
-
-    <div id="celebrate" class="celebrate hidden" aria-hidden="true">
-      <div class="celebrate-inner">
-        <h2>She said yes! 🎉</h2>
-        <p id="finalText">Can't wait to celebrate with you 💕</p>
-        <button id="closeCelebrate" class="close">Close</button>
-      </div>
-    </div>
-
-    <!-- Optional audio: add your own mp3 at assets/music.mp3 or change the src to a hosted file -->
-    <audio id="music" src="assets/music.mp3" preload="auto"></audio>
-  </main>
-
-  <!-- canvas-confetti (lightweight) -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
